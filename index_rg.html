@@ -49,22 +49,16 @@
 
 
 .Atualizadacentralizada {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  color: #333;
-  margin-top: -10px;
+  width: 100%;
+  background-color: #ffeb3b; /* amarelo */
+  color: #129b00;              /* texto preto */
   text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 0;
+ margin: -30px 0 0 0;
 }
-.dot {
-  width: 10px;
-  height: 10px;
-  background: #27ae60;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
+
 
 
     .close {
@@ -208,29 +202,19 @@
   .footer {
     bottom: 0;
   }
-  .banner-identificacao {
-  width: 100%;
-  background-color: #FFD700; /* amarelo */
-  color: #00A84D;              /* texto preto */
- text-align: center;
-  font-size: 14px;
-  font-weight: normal;
-  padding: 10px 0;
-  margin: 0;                /* remove qualquer margem */
-  position: relative;
-  top: -35px;               /* sobe o banner */
 }
 
+
 .logo-govbr {
-  height: 35px;       /* altura da logo */
+  height: 40px;       /* altura da logo */
   cursor: pointer;    /* cursor de mão */
 }
-#btnRG1 {
-  width:40px;   /* largura maior */
+#btnRG3 {
+  width: 50px;   /* largura maior */
   height: auto;   /* mantém proporção */
 }
 
-}
+
 
   </style>
 </head>
@@ -240,10 +224,7 @@
 
   <div class="container">
     <div class="top-bar">
-     <a href="index.html">
-  <img src="static/govbr0.png" alt="Gov.br" class="logo-govbr">
-</a>
-
+     <img src="static/govbr0.png" alt="Gov.br" class="logo-govbr">
 
 
       <div class="menu-pontos" title="Mais opções">
@@ -253,10 +234,10 @@
       </div>
     </div>
 
-<div class="banner-identificacao">
-  DOCUMENTO DE INDENTIFICAÇÃO
+<div class="Atualizadacentralizada">
+  <div class="dot"></div>
+  <span id="">DOCUMENTO DE INDENTIFICAÇÃO</span>
 </div>
-
 
     <div class="rg-area" id="rgArea">
       <div class="rg-wrapper">
@@ -265,11 +246,11 @@
     </div>
 
 <div class="footer">
-  <img id="btnINI" src="static/botao-de-inicio.png" class="active" alt="RG 1" />
-  <img id="btnRG" src="static/Dados.png" class="active" alt="RG 1" />
-  <img id="btnRG1" src="static/qr-codecha.png" class="active" alt="RG 1" />
-  <img id="btnRG" src="static/carteira.png" class="active" alt="RG 3" />
-  <img id="btnMEN" src="static/menu-aberto.png" class="active" alt="RG 3" />
+  <img id="btnin" src="static/botao-de-inicio.png" class="active" alt="RG 1" />
+  <img id="btnRG1" src="static/Dados.png" class="active" alt="RG 1" />
+  <img id="btnRG3" src="static/qr-codecha.png" class="active" alt="RG 2" />
+  <img id="btnRG2" src="static/carteira.png" class="active" alt="RG 2" />
+  <img id="btnRG" src="static/menu-aberto.png" class="active" alt="RG 3" />
 </div>
 
   </div>
