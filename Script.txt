@@ -1,0 +1,94 @@
+✅ SCRIPT PARA COLAR EM OUTRA IA
+
+Meu projeto é um sistema simples em HTML + CSS + JavaScript, sem backend.
+O sistema simula um login e depois mostra um RG digital do usuário usando 3 imagens diferentes.
+
+✔ O que eu pedi:
+
+O sistema deve funcionar apenas com JavaScript (e JSON dentro do próprio JS se necessário).
+
+Eu quero cadastrar vários usuários manualmente, direto no JavaScript.
+
+Cada usuário deve ter:
+
+cpf
+
+senha
+
+3 imagens (links hospedados no ImgBB ou Imgur)
+
+O login é feito em duas páginas:
+
+index2.html → usuário digita CPF
+
+index3.html → usuário digita senha
+
+Após validar o CPF e senha, o usuário deve ser redirecionado para:
+
+index_rg.html
+
+A página index_rg.html deve exibir as imagens do RG do usuário de acordo com o cadastro manual.
+
+✔ O que foi feito e funcionando:
+1️⃣ Criação da lista de usuários em JavaScript
+
+Exemplo:
+
+const usuarios = [
+  {
+    cpf: "12345678900",
+    senha: "123",
+    imagens: [
+      "https://i.ibb.co/CKCwxwD7/base-RGAPP1.png",
+      "https://i.ibb.co/TBBLCt8q/base-RGAPP2.png",
+      "https://i.ibb.co/VW6ZKCF3/base-RGAPP3.png"
+    ]
+  }
+];
+
+2️⃣ Login usando CPF e senha
+
+No index3.html, quando a senha é digitada, o JavaScript verifica CPF + senha.
+
+Se estiver correto, armazena os dados no localStorage:
+
+localStorage.setItem("usuarioLogado", JSON.stringify(user));
+
+3️⃣ Redirecionamento
+
+Após o login, o usuário vai automaticamente para:
+
+index_rg.html
+
+4️⃣ Carregar o RG de acordo com o usuário
+
+O index_rg.html pega o usuário salvo no localStorage:
+
+const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"));
+
+
+As imagens são carregadas assim:
+
+const imagens = usuarioLogado.imagens;
+document.getElementById("rgImg").src = imagens[0];
+
+5️⃣ Funcionalidade de trocar imagens
+
+Os botões "RG1, RG2, RG3" mudam a imagem exibida no RG.
+
+6️⃣ Remoção do código Jinja/Flask
+
+O arquivo index_rg.html tinha código que mostrava as imagens assim:
+
+{{ dados.imagens[0] }}
+
+
+Isso foi removido porque não existe backend, só HTML + JavaScript.
+
+📌 Resumo Final (para a IA saber):
+
+Meu sistema de login e exibição de RG agora funciona 100% via JavaScript.
+Cada usuário tem CPF, senha e 3 imagens.
+O login armazena o usuário no localStorage.
+A página index_rg.html puxa dinamicamente as imagens desse usuário e exibe o RG.
+Não existe backend, tudo é feito no front-end.
